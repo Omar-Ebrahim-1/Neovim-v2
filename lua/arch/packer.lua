@@ -8,6 +8,7 @@ return require('packer').startup(function(use)
   use 'navarasu/onedark.nvim'
   use 'tpope/vim-fugitive'
   use 'github/copilot.vim'
+  -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
     run = function()
@@ -15,5 +16,7 @@ return require('packer').startup(function(use)
       ts_update()
     end,
   }
+  use 'nvim-treesitter/playground'
+  use 'nvim-treesitter/nvim-treesitter-refactor'
 
 end)

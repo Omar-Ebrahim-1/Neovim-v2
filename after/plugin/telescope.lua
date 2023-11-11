@@ -5,6 +5,7 @@ vim.keymap.set('n', '<leader>pc', builtin.grep_string, {})
 vim.keymap.set('n', '<leader>pr', builtin.registers, {})
 vim.keymap.set('n', '<leader>pg', builtin.git_commits, {})
 vim.keymap.set('n', '<leader>pb', builtin.git_branches, {})
+vim.keymap.set('n', '<leader>pt', builtin.treesitter, {})
 -- Need LSP telescope mappings
 
 -- Considering removing this

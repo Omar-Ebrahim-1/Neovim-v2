@@ -7,16 +7,34 @@ require'nvim-treesitter.configs'.setup {
                        "php", "ruby", "scss", "vue", "yaml", "c_sharp",
                        "elixir", "haskell", "dart", "svelte", "dockerfile",
                        "astro", "arduino", "diff", "dot", "gitignore",
-                       "groovy", "hcl", "sql", "terraform",},
-
-  -- Install parsers synchronously (only applied to `ensure_installed`)
+                       "groovy", "hcl", "sql", "terraform",
+  },
   sync_install = false,
-
-  -- Automatically install missing parsers when entering buffer
-  -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
   auto_install = true,
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = false,
+  },
+  refactor = {
+    highlight_definitions = {
+      enable = true,
+      -- Set to false if you have an `updatetime` of ~100.
+      clear_on_cursor_move = true,
+    },
+    smart_rename = {
+      enable = true,
+      -- Assign keymaps to false to disable them, e.g. `smart_rename = false`.
+      keymaps = {
+        smart_rename = "grr",
+      },
+    },
+    navigation = {
+      enable = true,
+      -- Assign keymaps to false to disable them, e.g. `goto_definition = false`.
+      keymaps = {
+        goto_next_usage = "<a-*>",
+        goto_previous_usage = "<a-(>",
+      },
+    },
   },
 }
