@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/arch/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/home/arch/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
   ["onedark.nvim"] = {
     loaded = true,
     path = "/home/arch/.local/share/nvim/site/pack/packer/start/onedark.nvim",
