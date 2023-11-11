@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/home/arch/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
   ["onedark.nvim"] = {
     loaded = true,
     path = "/home/arch/.local/share/nvim/site/pack/packer/start/onedark.nvim",

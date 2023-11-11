@@ -7,5 +7,6 @@ return require('packer').startup(function(use)
   }
   use 'navarasu/onedark.nvim'
   use 'tpope/vim-fugitive'
+  use 'github/copilot.vim'
 
 end)
