@@ -1,0 +1,3 @@
+# Setup
+- `PackerSync`
+- `Copilot setup`
