@@ -72,6 +72,8 @@ lspconfig.pyright.setup({
 
 -- Java
 lspconfig.jdtls.setup{}
+-- LaTeX
+lspconfig.texlab.setup{}
 
 local luacheck = require("efmls-configs.linters.luacheck")
 local stylua = require("efmls-configs.formatters.stylua")
