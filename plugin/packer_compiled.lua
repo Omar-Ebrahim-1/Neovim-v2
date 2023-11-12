@@ -154,6 +154,11 @@ _G.packer_plugins = {
     path = "/home/arch/.local/share/nvim/site/pack/packer/start/nvim-treesitter-refactor",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-refactor"
   },
+  ["nvim-ufo"] = {
+    loaded = true,
+    path = "/home/arch/.local/share/nvim/site/pack/packer/start/nvim-ufo",
+    url = "https://github.com/kevinhwang91/nvim-ufo"
+  },
   ["onedark.nvim"] = {
     loaded = true,
     path = "/home/arch/.local/share/nvim/site/pack/packer/start/onedark.nvim",
@@ -173,6 +178,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/arch/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["promise-async"] = {
+    loaded = true,
+    path = "/home/arch/.local/share/nvim/site/pack/packer/start/promise-async",
+    url = "https://github.com/kevinhwang91/promise-async"
   },
   ["telescope.nvim"] = {
     loaded = true,

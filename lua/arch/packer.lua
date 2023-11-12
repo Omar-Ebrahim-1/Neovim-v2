@@ -1,10 +1,7 @@
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
+  use {'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim'}
   use 'stevearc/dressing.nvim'
   use 'navarasu/onedark.nvim'
   use 'tpope/vim-fugitive'
@@ -17,10 +14,8 @@ return require('packer').startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
   use 'm4xshen/autoclose.nvim'
   use 'github/copilot.vim'
-  use {
-    'Wansmer/treesj',
-    requires = {'nvim-treesitter/nvim-treesitter'}
-  }
+  use {'Wansmer/treesj', requires = 'nvim-treesitter/nvim-treesitter'}
+  use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
   -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
