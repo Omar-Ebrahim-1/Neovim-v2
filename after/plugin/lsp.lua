@@ -53,12 +53,35 @@ lspconfig.lua_ls.setup({
   },
 })
 
+-- python
+lspconfig.pyright.setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+  settings = {
+    pyright = {
+      disableOrganizeImports = false,
+      analysis = {
+        useLibraryCodeForTypes = true,
+        autoSearchPaths = true,
+        diagnosticMode = "workspace",
+        autoImportCompletions = true,
+      },
+    },
+  },
+})
+
+-- Java
+lspconfig.jdtls.setup{}
+
 local luacheck = require("efmls-configs.linters.luacheck")
 local stylua = require("efmls-configs.formatters.stylua")
+local flake8 = require("efmls-configs.linters.flake8")
+local black = require("efmls-configs.formatters.black")
 
 lspconfig.efm.setup({
   filetypes = {
     "lua",
+    "python",
   },
   init_options = {
     documentFormatting = true,
@@ -71,6 +94,7 @@ lspconfig.efm.setup({
   settings = {
     languages = {
       lua = {luacheck, stylua},
+      python = {flake8, black},
     },
   },
 })
