@@ -165,9 +165,9 @@ ls.config.set_config {
     },
   },
 }
-vim.keymap.set({"i"}, "<M-L>", function() ls.expand() end, {silent = true})
-vim.keymap.set({"i", "s"}, "<M-K>", function() ls.jump(1) end, {silent = true})
-vim.keymap.set({"i", "s"}, "<M-J>", function() ls.jump(-1) end, {silent = true})
+
+vim.keymap.set({"i", "s"}, "<C-L>", function() ls.jump( 1) end, {silent = true})
+vim.keymap.set({"i", "s"}, "<C-J>", function() ls.jump(-1) end, {silent = true})
 
 ls.add_snippets("all",
 {
@@ -176,3 +176,13 @@ ls.add_snippets("all",
   --    arg 2: a node
   s("simple", t "wow, you were right!"),
 })
+
+require("luasnip.loaders.from_vscode").load({
+  include = {
+    "python",
+    "javascript",
+    "typescript",
+    "lua",
+    "java"
+  },
+}) -- Load only python snippets
