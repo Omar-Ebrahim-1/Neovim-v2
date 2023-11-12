@@ -5,12 +5,13 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use 'stevearc/dressing.nvim'
   use 'navarasu/onedark.nvim'
   use 'tpope/vim-fugitive'
   use 'github/copilot.vim'
   use 'ThePrimeagen/harpoon'
   use 'mbbill/undotree'
-  use 'stevearc/dressing.nvim'
+  use 'numToStr/Comment.nvim'
   -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
