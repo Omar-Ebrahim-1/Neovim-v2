@@ -47,6 +47,12 @@ local plugins = {
   'hrsh7th/cmp-nvim-lsp',
   'hrsh7th/nvim-cmp',
   'onsails/lspkind-nvim',
+  "williamboman/mason.nvim",
+  "williamboman/mason-lspconfig.nvim",
+  {
+    'creativenull/efmls-configs-nvim',
+    dependencies = { 'neovim/nvim-lspconfig' },
+  },
 
   -- Snippets
   'L3MON4D3/LuaSnip',
