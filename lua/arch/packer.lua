@@ -8,7 +8,6 @@ return require('packer').startup(function(use)
   use 'stevearc/dressing.nvim'
   use 'navarasu/onedark.nvim'
   use 'tpope/vim-fugitive'
-  use 'github/copilot.vim'
   use 'ThePrimeagen/harpoon'
   use 'mbbill/undotree'
   use 'numToStr/Comment.nvim'
@@ -17,6 +16,11 @@ return require('packer').startup(function(use)
   use 'lervag/vimtex'
   use 'norcalli/nvim-colorizer.lua'
   use 'm4xshen/autoclose.nvim'
+  use 'github/copilot.vim'
+  use {
+    'Wansmer/treesj',
+    requires = {'nvim-treesitter/nvim-treesitter'}
+  }
   -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',

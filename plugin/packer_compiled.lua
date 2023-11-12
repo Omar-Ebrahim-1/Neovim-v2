@@ -179,6 +179,11 @@ _G.packer_plugins = {
     path = "/home/arch/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  treesj = {
+    loaded = true,
+    path = "/home/arch/.local/share/nvim/site/pack/packer/start/treesj",
+    url = "https://github.com/Wansmer/treesj"
+  },
   undotree = {
     loaded = true,
     path = "/home/arch/.local/share/nvim/site/pack/packer/start/undotree",
