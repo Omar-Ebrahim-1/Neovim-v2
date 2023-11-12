@@ -13,6 +13,7 @@ return require('packer').startup(function(use)
   use 'mbbill/undotree'
   use 'numToStr/Comment.nvim'
   use 'kylechui/nvim-surround'
+  use 'folke/which-key.nvim'
   -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
