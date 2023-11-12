@@ -23,5 +23,6 @@ return require('packer').startup(function(use)
   use 'nvim-treesitter/nvim-treesitter-refactor'
 
   -- LSP
+  use 'neovim/nvim-lspconfig'
 
 end)
