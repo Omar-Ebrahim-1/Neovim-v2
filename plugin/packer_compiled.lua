@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/home/arch/.local/share/nvim/site/pack/packer/start/dressing.nvim",
     url = "https://github.com/stevearc/dressing.nvim"
   },
+  firenvim = {
+    loaded = true,
+    path = "/home/arch/.local/share/nvim/site/pack/packer/start/firenvim",
+    url = "https://github.com/glacambre/firenvim"
+  },
   harpoon = {
     loaded = true,
     path = "/home/arch/.local/share/nvim/site/pack/packer/start/harpoon",

@@ -17,6 +17,10 @@ return require('packer').startup(function(use)
   use {'Wansmer/treesj', requires = 'nvim-treesitter/nvim-treesitter'}
   use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
   use "lukas-reineke/indent-blankline.nvim"
+  use {
+    'glacambre/firenvim',
+    run = function() vim.fn['firenvim#install'](0) end,
+  }
   -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
