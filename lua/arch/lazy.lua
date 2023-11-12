@@ -53,6 +53,7 @@ local plugins = {
     'creativenull/efmls-configs-nvim',
     dependencies = { 'neovim/nvim-lspconfig' },
   },
+  "folke/neoconf.nvim",
 
   -- Snippets
   'L3MON4D3/LuaSnip',
