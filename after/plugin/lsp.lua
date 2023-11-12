@@ -32,6 +32,26 @@ local on_attach = function()
     vim.keymap.set('n', 'grr', vim.lsp.buf.rename, {buffer = 0})
 end
 
+lspconfig.lua_ls.setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+  settings = { -- custom settings for lua
+    Lua = {
+      -- make the language server recognize "vim" global
+      diagnostics = {
+        globals = { "vim" },
+      },
+      workspace = {
+        -- make language server aware of runtime files
+        library = {
+          [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+          [vim.fn.stdpath("config") .. "/lua"] = true,
+        },
+      },
+    },
+  },
+})
+
 --------------------------------------------------------------------------------
 -- LSP autocomplete
 --------------------------------------------------------------------------------
@@ -58,7 +78,7 @@ cmp.setup({
     { name = 'nvim_lua' },
     { name = 'luasnip' },
     { name = 'nvim_lsp' },
-  }, 
+  },
   {
     { name = 'path' },
     { name = 'buffer', keyword_length = 5 },
