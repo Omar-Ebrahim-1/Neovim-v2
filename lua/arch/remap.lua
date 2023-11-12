@@ -3,7 +3,7 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Update plugins
-vim.keymap.set('n', '<leader>pu', [[:TSUpdate all<CR>:PackerSync<CR>]], { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>pu', [[:TSUpdate all<CR>]], { noremap = true, silent = true })
 
 -- Visual mode move block
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
