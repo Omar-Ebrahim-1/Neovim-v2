@@ -187,18 +187,59 @@ require("luasnip.loaders.from_vscode").load({
 
 -- Custom snippets
 -- All
-ls.add_snippets("all",
-{
-  -- Using parser
-  ls.parser.parse_snippet(
-		"lspsyn",
-		"Wow! This ${1:Stuff} really ${2:works. ${3:Well, a bit.}}"
-	),
-})
+ls.add_snippets(
+  "all",
+  {
+    -- Using parser
+    ls.parser.parse_snippet(
+      "lspsyn",
+      "Wow! This ${1:Stuff} really ${2:works. ${3:Well, a bit.}}"
+    ),
+  }
+)
 
 -- Lua
-ls.add_snippets("lua",
-{
-  -- Using lua code
-  s("simple", t "wow, you were right!"),
-})
+ls.add_snippets(
+  "lua",
+  {
+    -- Using lua code
+    s(
+      "insert_node",
+      fmt(
+        "local {} = require('{}')",
+        {
+          i(1),
+          rep(1),
+        }
+      )
+    ),
+    s(
+      "choice_node",
+      fmt(
+        "Test {}",
+        c(
+          1,
+          {
+            t("Hello"),
+            t("World"),
+          }
+        )
+      )
+    ),
+    s(
+      "function_node",
+      fmt(
+        "Time {}",
+        f(
+          function()
+            return os.date("%H:%M:%S", os.time())
+          end
+        )
+      )
+    )
+    -- TODO: Figure out how to do dynamic nodes
+    -- s(
+    --   "dynamic_node",
+    -- )
+  }
+)
