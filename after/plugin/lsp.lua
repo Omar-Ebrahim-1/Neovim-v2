@@ -1,9 +1,3 @@
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-local cmp = require 'cmp'
-local lspkind = require('lspkind')
-local ls = require 'luasnip'
-local types = require 'luasnip.util.types'
-
 --------------------------------------------------------------------------------
 -- Mason configuration
 --------------------------------------------------------------------------------
@@ -29,6 +23,7 @@ require("mason-lspconfig").setup {
 -- LSP configuration
 --------------------------------------------------------------------------------
 local lspconfig = require 'lspconfig'
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local on_attach = function()
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, {buffer = 0})
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {buffer = 0})
@@ -40,6 +35,8 @@ end
 --------------------------------------------------------------------------------
 -- LSP autocomplete
 --------------------------------------------------------------------------------
+local cmp = require 'cmp'
+local lspkind = require('lspkind')
 cmp.setup({
   snippet = {
     expand = function(args)
@@ -99,7 +96,8 @@ cmp.setup.filetype('gitcommit', {
 --------------------------------------------------------------------------------
 -- LSP Snippets
 --------------------------------------------------------------------------------
-local ls = require("luasnip")
+local ls = require 'luasnip'
+local types = require 'luasnip.util.types'
 -- some shorthands...
 local s = ls.snippet
 local sn = ls.snippet_node
