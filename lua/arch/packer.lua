@@ -10,6 +10,7 @@ return require('packer').startup(function(use)
   use 'github/copilot.vim'
   use 'ThePrimeagen/harpoon'
   use 'mbbill/undotree'
+  use 'stevearc/dressing.nvim'
   -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
