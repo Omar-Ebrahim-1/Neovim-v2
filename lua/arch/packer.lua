@@ -16,6 +16,7 @@ return require('packer').startup(function(use)
   use 'github/copilot.vim'
   use {'Wansmer/treesj', requires = 'nvim-treesitter/nvim-treesitter'}
   use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+  use "lukas-reineke/indent-blankline.nvim"
   -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
