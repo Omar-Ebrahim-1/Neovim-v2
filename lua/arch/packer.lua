@@ -12,6 +12,7 @@ return require('packer').startup(function(use)
   use 'ThePrimeagen/harpoon'
   use 'mbbill/undotree'
   use 'numToStr/Comment.nvim'
+  use 'kylechui/nvim-surround'
   -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
