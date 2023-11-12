@@ -14,6 +14,7 @@ return require('packer').startup(function(use)
   use 'numToStr/Comment.nvim'
   use 'kylechui/nvim-surround'
   use 'folke/which-key.nvim'
+  use 'norcalli/nvim-colorizer.lua'
   -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
