@@ -184,6 +184,11 @@ _G.packer_plugins = {
     path = "/home/arch/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
+  vimtex = {
+    loaded = true,
+    path = "/home/arch/.local/share/nvim/site/pack/packer/start/vimtex",
+    url = "https://github.com/lervag/vimtex"
+  },
   ["which-key.nvim"] = {
     loaded = true,
     path = "/home/arch/.local/share/nvim/site/pack/packer/start/which-key.nvim",
