@@ -168,15 +168,13 @@ ls.config.set_config {
 
 vim.keymap.set({"i", "s"}, "<C-L>", function() ls.jump( 1) end, {silent = true})
 vim.keymap.set({"i", "s"}, "<C-J>", function() ls.jump(-1) end, {silent = true})
+vim.keymap.set({"i", "s"}, "<C-K>", function()
+	if ls.choice_active() then
+		ls.change_choice(1)
+	end
+end, {silent = true})
 
-ls.add_snippets("all",
-{
-  -- basic, don't need to know anything else
-  --    arg 1: string
-  --    arg 2: a node
-  s("simple", t "wow, you were right!"),
-})
-
+-- Friendly-snippets
 require("luasnip.loaders.from_vscode").load({
   include = {
     "python",
@@ -185,4 +183,22 @@ require("luasnip.loaders.from_vscode").load({
     "lua",
     "java"
   },
-}) -- Load only python snippets
+})
+
+-- Custom snippets
+-- All
+ls.add_snippets("all",
+{
+  -- Using parser
+  ls.parser.parse_snippet(
+		"lspsyn",
+		"Wow! This ${1:Stuff} really ${2:works. ${3:Well, a bit.}}"
+	),
+})
+
+-- Lua
+ls.add_snippets("lua",
+{
+  -- Using lua code
+  s("simple", t "wow, you were right!"),
+})
