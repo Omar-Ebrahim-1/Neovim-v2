@@ -8,6 +8,8 @@ return require('packer').startup(function(use)
   use 'navarasu/onedark.nvim'
   use 'tpope/vim-fugitive'
   use 'github/copilot.vim'
+  use 'ThePrimeagen/harpoon'
+  use 'mbbill/undotree'
   -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
@@ -18,5 +20,7 @@ return require('packer').startup(function(use)
   }
   use 'nvim-treesitter/playground'
   use 'nvim-treesitter/nvim-treesitter-refactor'
+
+  -- LSP
 
 end)
