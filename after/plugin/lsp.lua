@@ -71,9 +71,22 @@ lspconfig.pyright.setup({
 })
 
 -- Java
-lspconfig.jdtls.setup{}
+lspconfig.jdtls.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = {
+    "jdtls",
+    "-configuration",
+    "~/.cache/jdtls/config",
+    "-data",
+    "~/.cache/jdtls/workspace",
+  },
+}
 -- LaTeX
-lspconfig.texlab.setup{}
+lspconfig.texlab.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
 
 local luacheck = require("efmls-configs.linters.luacheck")
 local stylua = require("efmls-configs.formatters.stylua")
