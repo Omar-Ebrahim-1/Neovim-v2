@@ -44,7 +44,8 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- Code Runner
 vim.keymap.set("n", "<leader>rp", "<cmd>w % | !python3 %<CR>", { silent = true })
-vim.keymap.set("n", "<leader>rj", "<cmd>w % | !tsc % && node %:r.js<CR>", { silent = true })
+vim.keymap.set("n", "<leader>rt", "<cmd>w % | !tsc % && node %:r.js<CR>", { silent = true })
+vim.keymap.set("n", "<leader>rj", "<cmd>w % | !java %<CR>", { silent = true })
 vim.keymap.set("n", "<leader>rb", "<cmd>w % | !bash %<CR>", { silent = true })
 vim.keymap.set("n", "<leader>rl", "<cmd>w % | !lua %<CR>", { silent = true })
 vim.keymap.set("n", "<leader>rc", "<cmd>w % | !g++ -Wall -o %:r % && ./%:r<CR>", { silent = true })
