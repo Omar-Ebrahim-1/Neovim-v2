@@ -39,13 +39,22 @@ vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
+-- Java Runner
+function JavaRunner()
+  vim.cmd("w %")
+  vim.cmd("!javac %")
+  local filename = vim.fn.expand('%:r')  -- Get the filename without extension
+  local package_name = string.gsub(filename, "/", ".")  -- Replace slashes with dots
+  vim.cmd("!java " .. package_name)
+end
+
 -- Add execute permission
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- Code Runner
 vim.keymap.set("n", "<leader>rp", "<cmd>w % | !python3 %<CR>", { silent = true })
 vim.keymap.set("n", "<leader>rt", "<cmd>w % | !tsc % && node %:r.js<CR>", { silent = true })
-vim.keymap.set("n", "<leader>rj", "<cmd>w % | !java %<CR>", { silent = true })
+vim.keymap.set("n", "<leader>rj", "[[<cmd>lua JavaRunner()<cr>]]", { silent = true })
 vim.keymap.set("n", "<leader>rb", "<cmd>w % | !bash %<CR>", { silent = true })
 vim.keymap.set("n", "<leader>rl", "<cmd>w % | !lua %<CR>", { silent = true })
 vim.keymap.set("n", "<leader>rc", "<cmd>w % | !g++ -Wall -o %:r % && ./%:r<CR>", { silent = true })
