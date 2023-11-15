@@ -46,6 +46,7 @@ function JavaRunner()
   local filename = vim.fn.expand('%:r')  -- Get the filename without extension
   local package_name = string.gsub(filename, "/", ".")  -- Replace slashes with dots
   vim.cmd("!java " .. package_name)
+  vim.fn.input("Press ENTER to continue")
 end
 
 -- Add execute permission
