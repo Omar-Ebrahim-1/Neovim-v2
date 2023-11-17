@@ -295,6 +295,21 @@ ls.add_snippets(
       "lspsyn",
       "Wow! This ${1:Stuff} really ${2:works. ${3:Well, a bit.}}"
     ),
+    s(
+      "tp",
+      fmt(
+        "{}: {}[:]",
+        {
+          i(1),
+          c(2,
+          {
+            t("Chapters"),
+            t("Documentation"),
+            t("Playlist"),
+          }),
+        }
+      )
+    )
   }
 )
 
