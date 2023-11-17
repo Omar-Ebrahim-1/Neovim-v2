@@ -114,6 +114,10 @@ lspconfig.efm.setup({
   },
 })
 
+vim.diagnostic.disable()
+vim.keymap.set("n", "<leader>dd", "<cmd>lua vim.diagnostic.disable()<CR>", {silent = true})
+vim.keymap.set("n", "<leader>de", "<cmd>lua vim.diagnostic.enable()<CR>", {silent = true})
+
 --------------------------------------------------------------------------------
 -- LSP autocomplete
 --------------------------------------------------------------------------------
