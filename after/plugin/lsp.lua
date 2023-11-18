@@ -88,32 +88,6 @@ lspconfig.texlab.setup{
   capabilities = capabilities,
 }
 
-local luacheck = require("efmls-configs.linters.luacheck")
-local stylua = require("efmls-configs.formatters.stylua")
-local flake8 = require("efmls-configs.linters.flake8")
-local black = require("efmls-configs.formatters.black")
-
-lspconfig.efm.setup({
-  filetypes = {
-    "lua",
-    "python",
-  },
-  init_options = {
-    documentFormatting = true,
-    documentRangeFormatting = true,
-    hover = true,
-    documentSymbol = true,
-    codeAction = true,
-    completion = true,
-  },
-  settings = {
-    languages = {
-      lua = {luacheck, stylua},
-      python = {flake8, black},
-    },
-  },
-})
-
 vim.diagnostic.disable()
 vim.keymap.set("n", "<leader>dd", "<cmd>lua vim.diagnostic.disable()<CR>", {silent = true})
 vim.keymap.set("n", "<leader>de", "<cmd>lua vim.diagnostic.enable()<CR>", {silent = true})
