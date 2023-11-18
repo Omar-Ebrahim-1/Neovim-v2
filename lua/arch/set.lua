@@ -8,11 +8,6 @@ vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.smartindent = true
-vim.cmd([[
-  autocmd FileType python set tabstop=4
-  autocmd FileType python set softtabstop=4
-  autocmd FileType python set shiftwidth=4
-]])
 
 -- Disable line wrap
 vim.opt.wrap = false
