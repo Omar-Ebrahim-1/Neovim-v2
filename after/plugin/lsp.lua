@@ -272,7 +272,7 @@ ls.add_snippets(
     s(
       "tp",
       fmt(
-        "{}: {}[:]",
+        "{}: {} [:]",
         {
           i(1),
           c(2,
@@ -284,6 +284,22 @@ ls.add_snippets(
         }
       )
     )
+  }
+)
+
+-- LaTeX
+ls.add_snippets(
+  "tex",
+  {
+    s(
+      "mr",
+      fmt(
+        "\\mathrm{{{}}}",
+        {
+          i(1),
+        }
+      )
+    ),
   }
 )
 
