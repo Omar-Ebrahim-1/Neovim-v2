@@ -14,6 +14,12 @@ vim.api.nvim_exec(
 ]],
 false
 )
+vim.api.nvim_exec(
+[[
+  autocmd FileType markdown set tabstop=2 shiftwidth=2
+]],
+false
+)
 
 
 -- Disable line wrap

@@ -255,7 +255,8 @@ require("luasnip.loaders.from_vscode").load({
     "javascript",
     "typescript",
     "lua",
-    "java"
+    "java",
+    "tex",
   },
 })
 
@@ -294,7 +295,7 @@ ls.add_snippets(
     s(
       "mr",
       fmt(
-        "\\mathrm{{{}}}",
+        "\\ \\mathrm{{{}}}",
         {
           i(1),
         }
@@ -348,3 +349,6 @@ ls.add_snippets(
     -- )
   }
 )
+
+-- Source file
+vim.keymap.set("n", "<leader><leader>l", "<cmd>so ~/.config/nvim/after/plugin/lsp.lua<CR>", {silent = true})
