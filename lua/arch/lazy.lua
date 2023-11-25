@@ -49,10 +49,6 @@ local plugins = {
   'onsails/lspkind-nvim',
   "williamboman/mason.nvim",
   "williamboman/mason-lspconfig.nvim",
-  {
-    'creativenull/efmls-configs-nvim',
-    dependencies = { 'neovim/nvim-lspconfig' },
-  },
   "folke/neoconf.nvim",
 
   -- Snippets
