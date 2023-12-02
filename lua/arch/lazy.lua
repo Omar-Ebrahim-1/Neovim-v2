@@ -52,7 +52,11 @@ local plugins = {
   "folke/neoconf.nvim",
 
   -- Snippets
-  'L3MON4D3/LuaSnip',
+  {
+    "L3MON4D3/LuaSnip",
+    -- follow latest release.
+    version = "v2.*", 
+  },
   'saadparwaiz1/cmp_luasnip',
   'rafamadriz/friendly-snippets',
 }
