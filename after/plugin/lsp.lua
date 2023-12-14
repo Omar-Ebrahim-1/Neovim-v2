@@ -81,8 +81,15 @@ lspconfig.jdtls.setup{
     "~/.cache/jdtls/workspace",
   },
 }
+
 -- LaTeX
 lspconfig.texlab.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+-- TypeScript
+lspconfig.tsserver.setup{
   on_attach = on_attach,
   capabilities = capabilities,
 }
