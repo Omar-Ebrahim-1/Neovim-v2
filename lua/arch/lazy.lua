@@ -34,6 +34,12 @@ local plugins = {
     'glacambre/firenvim',
     build = function() vim.fn['firenvim#install'](0) end,
   },
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function() vim.fn["mkdp#util#install"]() end,
+  },
   -- Treesitter
   {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
   'nvim-treesitter/playground',
