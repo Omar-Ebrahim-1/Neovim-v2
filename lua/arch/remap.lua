@@ -63,7 +63,7 @@ vim.keymap.set("n", "<leader>rl", "<cmd>w % | !lua %<CR>", { silent = true })
 vim.keymap.set("n", "<leader>rc", "<cmd>w % | !gcc -Wall -o %:r % && ./%:r<CR>", { silent = true })
 vim.keymap.set("n", "<leader>ra", "<cmd>w % | !as % -o %:r.o && ld %:r.o -o %:r<CR>", { silent = true })
 -- vim.keymap.set("n", "<leader>rd", "<cmd>w % | !dot -Tpng % -o %:r.png && okular %:r.png<CR>", { silent = true })
--- vim.keymap.set("n", "<leader>rm", "<cmd>w % | MarkdownPreview<CR>", { silent = true })
+vim.keymap.set("n", "<leader>rm", "<cmd>w % | MarkdownPreview<CR>", { silent = true })
 
 -- Copilot
 vim.api.nvim_set_keymap('i', '<C-,>', 'copilot#Accept("<CR>")', {expr=true, silent=true})
