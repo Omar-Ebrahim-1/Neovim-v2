@@ -52,7 +52,7 @@ lspconfig.lua_ls.setup({
   },
 })
 
--- python
+-- Python
 lspconfig.pyright.setup({
   capabilities = capabilities,
   on_attach = on_attach,
@@ -68,6 +68,36 @@ lspconfig.pyright.setup({
     },
   },
 })
+
+-- Docker
+lspconfig.dockerls.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+-- Docker Compose
+lspconfig.docker_compose_language_service.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+-- Go
+lspconfig.gopls.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+-- Json
+lspconfig.jsonls.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+-- Svelte
+lspconfig.svelte.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
 
 -- Java
 lspconfig.jdtls.setup{

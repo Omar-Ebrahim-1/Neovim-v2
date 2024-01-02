@@ -12,7 +12,12 @@ require("autoclose").setup({
     ['"'] = { escape = true, close = true, pair = '""' },
     ["'"] = { escape = true, close = true, pair = "''" },
     ["`"] = { escape = true, close = true, pair = "``" },
-    ["$"] = { escape = true, close = true, pair = "$$" },
+    ["$"] = {
+      escape = true,
+      close = true,
+      pair = "$$",
+      enabled_filetypes= { "tex", "latex" },
+    },
   },
   options = {
     -- disabled_filetypes = { "text" },
