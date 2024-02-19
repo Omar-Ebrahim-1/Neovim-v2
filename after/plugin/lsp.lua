@@ -81,12 +81,6 @@ lspconfig.docker_compose_language_service.setup{
   capabilities = capabilities,
 }
 
--- Go
-lspconfig.gopls.setup{
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
-
 -- Json
 lspconfig.jsonls.setup{
   on_attach = on_attach,
