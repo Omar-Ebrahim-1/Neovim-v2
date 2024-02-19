@@ -99,19 +99,6 @@ lspconfig.svelte.setup{
   capabilities = capabilities,
 }
 
--- Java
-lspconfig.jdtls.setup{
-  on_attach = on_attach,
-  capabilities = capabilities,
-  cmd = {
-    "jdtls",
-    "-configuration",
-    "~/.cache/jdtls/config",
-    "-data",
-    "~/.cache/jdtls/workspace",
-  },
-}
-
 -- LaTeX
 lspconfig.texlab.setup{
   on_attach = on_attach,
