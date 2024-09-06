@@ -29,7 +29,7 @@ local on_attach = function()
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {buffer = 0})
     vim.keymap.set('n', '<leader>dj', vim.diagnostic.goto_next, {buffer = 0})
     vim.keymap.set('n', '<leader>dk', vim.diagnostic.goto_prev, {buffer = 0})
-    vim.keymap.set('n', 'grr', vim.lsp.buf.rename, {buffer = 0})
+    -- vim.keymap.set('n', 'grr', vim.lsp.buf.rename, {buffer = 0})
 end
 
 lspconfig.lua_ls.setup({
@@ -100,10 +100,10 @@ lspconfig.texlab.setup{
 }
 
 -- TypeScript
-lspconfig.tsserver.setup{
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
+-- lspconfig.tsserver.setup{
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+-- }
 
 vim.diagnostic.disable()
 vim.keymap.set("n", "<leader>dd", "<cmd>lua vim.diagnostic.disable()<CR>", {silent = true})

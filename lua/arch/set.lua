@@ -34,6 +34,7 @@ vim.opt.undofile = true
 -- Incremental search
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
+vim.opt.ignorecase = true
 
 -- Colorscheme
 vim.opt.termguicolors = true

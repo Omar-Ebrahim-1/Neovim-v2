@@ -2,7 +2,6 @@ require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
   ensure_installed = { "c", "lua", "vim", "vimdoc", "query",
                        "python", "javascript", "typescript",
-                       "java",
   },
   sync_install = false,
   auto_install = true,
@@ -17,7 +16,7 @@ require'nvim-treesitter.configs'.setup {
       clear_on_cursor_move = true,
     },
     smart_rename = {
-      enable = false,
+      enable = true,
       -- Assign keymaps to false to disable them, e.g. `smart_rename = false`.
       keymaps = {
         smart_rename = "grr",

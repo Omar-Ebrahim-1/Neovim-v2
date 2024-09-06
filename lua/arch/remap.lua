@@ -47,6 +47,7 @@ vim.keymap.set("n", "<leader>rp", "<cmd>w % | !python3 %<CR>", { silent = true }
 vim.keymap.set("n", "<leader>rt", "<cmd>w % | !tsc % && node %:r.js<CR>", { silent = true })
 vim.keymap.set("n", "<leader>rb", "<cmd>w % | !bash %<CR>", { silent = true })
 vim.keymap.set("n", "<leader>rl", "<cmd>w % | !lua %<CR>", { silent = true })
+vim.keymap.set("n", "<leader>rh", "<cmd>w % | !firefox %<CR>", { silent = true })
 -- vim.keymap.set("n", "<leader>rd", "<cmd>w % | !dot -Tpng % -o %:r.png && okular %:r.png<CR>", { silent = true })
 vim.keymap.set("n", "<leader>rm", "<cmd>w % | MarkdownPreview<CR>", { silent = true })
 
