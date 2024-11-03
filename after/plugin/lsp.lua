@@ -88,10 +88,10 @@ lspconfig.jsonls.setup{
 }
 
 -- Svelte
-lspconfig.svelte.setup{
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
+-- lspconfig.svelte.setup{
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+-- }
 
 -- LaTeX
 lspconfig.texlab.setup{
@@ -100,22 +100,22 @@ lspconfig.texlab.setup{
 }
 
 -- TypeScript
--- lspconfig.tsserver.setup{
+lspconfig.tsserver.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+-- CMake
+-- lspconfig.cmake.setup{
 --   on_attach = on_attach,
 --   capabilities = capabilities,
 -- }
 
--- CMake
-lspconfig.cmake.setup{
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
-
--- C++
-lspconfig.clangd.setup{
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
+-- -- C++
+-- lspconfig.clangd.setup{
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+-- }
 
 vim.diagnostic.disable()
 vim.keymap.set("n", "<leader>dd", "<cmd>lua vim.diagnostic.disable()<CR>", {silent = true})
